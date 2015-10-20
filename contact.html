@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>Sobre mim - Ricardo Henrique</title>
+		<meta name="description" content="Engenheiro de Software e Desenvolvedor Web com conhecimentos em PHP, 
+		MySql, XHTML, CSS, Javascript e Gerência de Projetos e outras tecnologias pela Universidade Federal de 
+		Goiás (UFG)">
+		<meta name="keywords" content="Engenheiro de Software,Desenvolvedor Web,MySql,XHTML,CSS,Javascript,
+		Bootstrap,Scrum">
+		<meta name="robots" content="index, follow">
+		<meta name="author" content="Ricardo Henrique">
+		<meta name="reply-to" content="ricardohenrique996@gmail.com">
+		<link rel="icon" href="assets/images/favicon/tio-sam-32.png" sizes="32x32">
+		<meta property="og:title" content="Ricardo Henrique - Engenheiro de Software">
+		<meta property="og:description" content="Engenheiro de Software e Desenvolvedor 
+		Web com conhecimentos em PHP, MySql, XHTML, CSS, Javascript e Gerência de Projetos 
+		e outras tecnologias pela Universidade Federal de Goiás (UFG)">
+		<meta property="og:url" content="http://ricardohenriq.github.io/">
+		<meta property="og:image" content="http://ricardohenriq.github.io/assets/images/misc/Tio-Sam-Big.png">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Ricardo Henrique - Engenheiro de Software">
+		<link rel="stylesheet" href="library/Bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<script defer src="library/jquery-1.11.1/jquery-1.11.1.min.js"></script>
+		<script defer src="library/Bootstrap/js/bootstrap.min.js"></script>
+		<script defer src="assets/js/main.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="row">
+					<div id="profile_information" class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+						<div id="header-description">
+							<div id="profile_content">
+								<h1 class="nome"><strong>My Banners</strong></h1>
+								<h2 class="desc">Share your Banner to World</h2>
+							</div>
+							<a href="#" target="_blank" id="sponsored-banner">
+								<img src="temp/125x125.png">
+							</a>
+						</div>
+						<div id="menu" class="span7 text-center">
+							<a class="btn btn-xs btn-info" href="#">Banners</a>
+							<a class="btn btn-xs btn-info" href="send-your-banner.html">Send your Banner</a>
+							<a class="btn btn-xs btn-info" href="aprender.html">Terms of Use</a>
+							<a class="btn btn-xs btn-info" href="contato.html">Privacy Policy</a>
+							<a class="btn btn-xs btn-info" href="experiencia.html">Contact</a>
+							<a class="btn btn-xs btn-info" href="portfolio.html">Create a Banner</a>
+							<a class="btn btn-xs btn-info" href="portfolio.html">Donate</a>
+							<a class="btn btn-xs btn-info" href="portfolio.html">Buy the Background</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 section">
+						<h2 class="text-center">Formulário de Contato</h2>
+						<form id="contact_form" class="form-horizontal" role="form" method="POST">
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="nome">Nome:</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" name="nome" id="nome" placeholder="Name">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="email">Email:</label>
+								<div class="col-sm-10">          
+									<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="assunto">Assunto:</label>
+								<div class="col-sm-10">          
+									<input type="text" class="form-control" name="assunto" id="assunto" placeholder="Assunto">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="desc">Descrição:</label>
+								<div class="col-sm-10">          
+									<textarea rows="4" name="desc" id="desc" maxlength="1000"></textarea>
+								</div>
+							</div>
+							<div class="form-group">        
+								<div class="col-sm-offset-2 col-sm-10">
+									<button class="btn btn-info gray pull-right" onClick="sendMail();return false;">Enviar</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-md-4">
+						<div class="section padding-inner">
+							<h2>Contato</h2>
+							<h4>Ricardo Henrique</h4>
+							<div class="block">
+								<i class="glyphicon glyphicon-map-marker"></i>
+								Goiânia, GO 74723-290
+							</div>
+							<div class="block">
+								<i class="glyphicon glyphicon-phone-alt"></i>
+								Tel: (62)
+							</div>
+							<div class="block">
+								<i class="glyphicon glyphicon-phone"></i>
+								Cel: (62)
+							</div>
+							<div class="block">
+								<i class="glyphicon glyphicon-envelope"></i>
+								Email: <a href="mailto:ricardohenrique996@gmail.com" class="orange">ricardohenrique996@gmail.com</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="text-center">
+			My Banners - 2015. All rights reserved
+		</footer>
+	</body>
+</html>
