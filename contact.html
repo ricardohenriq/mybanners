@@ -60,38 +60,21 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 section">
-						<h2 class="text-center">Formulário de Contato</h2>
-						<form id="contact_form" class="form-horizontal" role="form" method="POST">
-							<div class="form-group">
-								<label class="control-label col-sm-2" for="nome">Nome:</label>
-								<div class="col-sm-10">
-									<input type="text" class="form-control" name="nome" id="nome" placeholder="Name">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-sm-2" for="email">Email:</label>
-								<div class="col-sm-10">          
-									<input type="email" class="form-control" name="email" id="email" placeholder="Email">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-sm-2" for="assunto">Assunto:</label>
-								<div class="col-sm-10">          
-									<input type="text" class="form-control" name="assunto" id="assunto" placeholder="Assunto">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-sm-2" for="desc">Descrição:</label>
-								<div class="col-sm-10">          
-									<textarea rows="4" name="desc" id="desc" maxlength="1000"></textarea>
-								</div>
-							</div>
-							<div class="form-group">        
-								<div class="col-sm-offset-2 col-sm-10">
-									<button class="btn btn-info gray pull-right" onClick="sendMail();return false;">Enviar</button>
-								</div>
-							</div>
-						</form>
+						<h2 class="text-center">Please send an email when</h2>
+						<ul class="list-styled yes">
+							<li>
+								Encontrar conteudo inapropriado.
+							</li>
+							<li>
+								Se quiser comprar o Background do site.
+							</li>
+							<li>
+								Se quiser que seu banner fique fixo na primeira posição.
+							</li>
+							<li>
+								Se quiser nos dar seu feedback.
+							</li>
+						</ul>
 					</div>
 					<div class="col-md-4">
 						<div class="section padding-inner">
@@ -114,6 +97,43 @@
 								Email: <a href="mailto:ricardohenrique996@gmail.com" class="orange">ricardohenrique996@gmail.com</a>
 							</div>
 						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8 section">
+						<h2 class="text-center">Formulário de Contato</h2>
+						<h6 class="text-center">(Ou Você pode nos enviar um email diretamente)<h6>
+						<form id="contact_form" class="form-horizontal" role="form" method="POST">
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="nome">Nome:</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" name="nome" id="nome" placeholder="Name">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="email">Email:</label>
+								<div class="col-sm-10">          
+									<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="assunto">Assunto:</label>
+								<div class="col-sm-10">          
+									<input type="text" class="form-control" name="assunto" id="assunto" placeholder="Assunto">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="desc">Message:</label>
+								<div class="col-sm-10">          
+									<textarea rows="4" name="desc" id="desc" maxlength="1000"></textarea>
+								</div>
+							</div>
+							<div class="form-group">        
+								<div class="col-sm-offset-2 col-sm-10">
+									<button class="btn btn-info gray pull-right" onClick="sendMail();return false;">Enviar</button>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>

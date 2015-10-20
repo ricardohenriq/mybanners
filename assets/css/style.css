@@ -70,3 +70,9 @@ footer{
     margin-bottom: -40px;
     width: 100%;
 }
+
+.list-styled.yes li {
+	list-style-type: none;
+	background: url('http://d26mw3lpqa99qj.cloudfront.net/prod-fool/sell/yes-15d4ba569f9f4beb7d8cfd8adc8ed886.png') no-repeat;
+	padding:0 0 2% 45px;
+}
