@@ -32,7 +32,7 @@
 		<header>
 			<div class="container">
 				<div class="row">
-					<div id="profile_information" class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+					<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
 						<div id="header-description">
 							<div id="header-content">
 								<h1 class="site-name"><strong>My Banners</strong></h1>
@@ -78,27 +78,22 @@
 							<li>
 								Se quiser remover o seu banner da exibição (é necessário enviar seus dados).
 							</li>
+							<li>
+								Se tiver alguma dúvida de como funciona.
+							</li>
 						</ul>
 					</div>
 					<div class="col-md-4">
 						<div class="section padding-inner">
-							<h2>Contato</h2>
-							<h4>Ricardo Henrique</h4>
-							<div class="block">
-								<i class="glyphicon glyphicon-map-marker"></i>
-								Goiânia, GO 74723-290
-							</div>
-							<div class="block">
-								<i class="glyphicon glyphicon-phone-alt"></i>
-								Tel: (62)
-							</div>
-							<div class="block">
-								<i class="glyphicon glyphicon-phone"></i>
-								Cel: (62)
-							</div>
+							<h2>Contact</h2>
+							<h4>Use your own Email</h4>
 							<div class="block">
 								<i class="glyphicon glyphicon-envelope"></i>
-								Email: <a href="mailto:ricardohenrique996@gmail.com" class="orange">ricardohenrique996@gmail.com</a>
+								Email: <a href="mailto:ricardohenrique996@gmail.com">ricardohenrique996@gmail.com</a>
+							</div>
+							<div class="block">
+								<i class="glyphicon glyphicon-pencil"></i>
+								Subject: [Your Subject] <span class="title">|MyBanners Site|</span>
 							</div>
 						</div>
 					</div>
@@ -107,34 +102,35 @@
 					<div class="col-md-8 section">
 						<h2 class="text-center">Formulário de Contato</h2>
 						<h6 class="text-center">(Ou Você pode nos enviar um email diretamente)<h6>
-						<form id="contact_form" class="form-horizontal" role="form" method="POST">
+						<form id="contact-form" class="form-horizontal" role="form" method="POST">
 							<div class="form-group">
-								<label class="control-label col-sm-2" for="nome">Nome:</label>
+								<label class="control-label col-sm-2" for="sender_name">Your Name:</label>
 								<div class="col-sm-10">
-									<input type="text" class="form-control" name="nome" id="nome" placeholder="Name">
+									<input type="text" class="form-control" name="sender_name" id="sender_name">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-2" for="email">Email:</label>
+								<label class="control-label col-sm-2" for="email">Your Email:</label>
 								<div class="col-sm-10">          
-									<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+									<input type="email" class="form-control" name="email" id="email">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-2" for="assunto">Assunto:</label>
+								<label class="control-label col-sm-2" for="subject">Subject:</label>
 								<div class="col-sm-10">          
-									<input type="text" class="form-control" name="assunto" id="assunto" placeholder="Assunto">
+									<input type="text" class="form-control" name="subject" id="subject" 
+									placeholder="[Your Subject] |MyBanners Site|">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-2" for="desc">Message:</label>
+								<label class="control-label col-sm-2" for="message">Message:</label>
 								<div class="col-sm-10">          
-									<textarea rows="4" name="desc" id="desc" maxlength="1000"></textarea>
+									<textarea rows="4" name="message" id="message" maxlength="1000"></textarea>
 								</div>
 							</div>
 							<div class="form-group">        
 								<div class="col-sm-offset-2 col-sm-10">
-									<button class="btn btn-info gray pull-right" onClick="sendMail();return false;">Enviar</button>
+									<button class="btn btn-info pull-right" onClick="sendMail('contact-form');return false;">Send</button>
 								</div>
 							</div>
 						</form>
