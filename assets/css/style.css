@@ -2,7 +2,7 @@ body{
 	position:relative
 }
 
-#profile_content{
+#header-content{
 	display:inline-block;
 	margin-right:50px
 }
@@ -36,11 +36,11 @@ h2{
 	margin-top:0px
 }
 
-.nome{
+.site-name{
 	color:#49515A
 }
 
-.desc{
+.slogan{
 	color:#BBBDBF
 }
 
@@ -70,13 +70,26 @@ footer{
     margin-bottom: -40px;
     width: 100%;
 }
+ol li{
+	margin-bottom:10px
+}
 
-.list-styled.yes li {
+.yes li {
 	list-style-type: none;
-	background: url('http://d26mw3lpqa99qj.cloudfront.net/prod-fool/sell/yes-15d4ba569f9f4beb7d8cfd8adc8ed886.png') no-repeat;
+	background: url('https://raw.githubusercontent.com/mybanners/mybanners.github.io/master/temp/yes-icon.png') no-repeat;
+	padding:0 0 2% 45px;
+}
+
+.right-arrow li{
+	list-style-type: none;
+	background: url('https://raw.githubusercontent.com/mybanners/mybanners.github.io/master/temp/right-arrow-icon30x30.gif') no-repeat;
 	padding:0 0 2% 45px;
 }
 
 .title{
     font-weight:bold
+}
+
+textarea{
+	width:100%
 }

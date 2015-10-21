@@ -1,7 +1,195 @@
+<!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>Sobre mim - Ricardo Henrique</title>
+		<meta name="description" content="Engenheiro de Software e Desenvolvedor Web com conhecimentos em PHP, 
+		MySql, XHTML, CSS, Javascript e Gerência de Projetos e outras tecnologias pela Universidade Federal de 
+		Goiás (UFG)">
+		<meta name="keywords" content="Engenheiro de Software,Desenvolvedor Web,MySql,XHTML,CSS,Javascript,
+		Bootstrap,Scrum">
+		<meta name="robots" content="index, follow">
+		<meta name="author" content="Ricardo Henrique">
+		<meta name="reply-to" content="ricardohenrique996@gmail.com">
+		<link rel="icon" href="assets/images/favicon/tio-sam-32.png" sizes="32x32">
+		<meta property="og:title" content="Ricardo Henrique - Engenheiro de Software">
+		<meta property="og:description" content="Engenheiro de Software e Desenvolvedor 
+		Web com conhecimentos em PHP, MySql, XHTML, CSS, Javascript e Gerência de Projetos 
+		e outras tecnologias pela Universidade Federal de Goiás (UFG)">
+		<meta property="og:url" content="http://ricardohenriq.github.io/">
+		<meta property="og:image" content="http://ricardohenriq.github.io/assets/images/misc/Tio-Sam-Big.png">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Ricardo Henrique - Engenheiro de Software">
+		<link rel="stylesheet" href="library/Bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<script defer src="library/jquery-1.11.1/jquery-1.11.1.min.js"></script>
+		<script defer src="library/Bootstrap/js/bootstrap.min.js"></script>
+		<script defer src="assets/js/main.js"></script>
 	</head>
 	<body>
-		send banner
+		<header>
+			<div class="container">
+				<div class="row">
+					<div id="profile_information" class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+						<div id="header-description">
+							<div id="header-content">
+								<h1 class="site-name"><strong>My Banners</strong></h1>
+								<h2 class="slogan">Share your Banner to World</h2>
+							</div>
+							<a href="#" target="_blank" id="sponsored-banner">
+								<img src="temp/125x125.png">
+							</a>
+						</div>
+						<div id="menu" class="span7 text-center">
+							<a class="btn btn-xs btn-info" href="index.html">Banners</a>
+							<a class="btn btn-xs btn-info" href="#">Send your Banner</a>
+							<a class="btn btn-xs btn-info" href="terms-of-use.html">Terms of Use</a>
+							<a class="btn btn-xs btn-info" href="privacy-policy.html">Privacy Policy</a>
+							<a class="btn btn-xs btn-info" href="contact.html">Contact</a>
+							<a class="btn btn-xs btn-info" href="create-banner.html">Create a Banner</a>
+							<a class="btn btn-xs btn-info" href="#">Donate</a>
+							<a class="btn btn-xs btn-info" href="buy-background.html">Buy the Background</a>
+							<a class="btn btn-xs btn-info" href="how-it-works.html">How it Works</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="panel panel-default col-md-10 col-md-offset-1">
+                        <div class="panel-heading">
+                            <h3 class="panel-title span7 text-center title">Send your Banner</h3>
+                        </div>
+                        <div class="panel-body">
+							<p>
+								<span class="title">Seu site deve seguir nossas Regras, por favor leia nossos</span> 
+								<a class="btn btn-xs btn-info" href="aprender.html">Terms of Use</a>
+								e
+								<a class="btn btn-xs btn-info" href="contato.html">Privacy Policy</a>
+								<br><br>
+								Você pode nos enviar seu banner de duas formas:<br>
+								<ol>
+									<li>
+										Submeta o <span class="title">Link Completo de Redirecionamento</span> quando o Banner for clicado seguindo o exemplo:
+										(<span class="title">http://www.site.com</span>) e o <span class="title">Link Completo da Imagem</span> seguindo o exemplo: (<span class="title">http://www.site.com/banner.gif</span>).
+										<br><br>
+										<form id="separate-banner-form" class="form-horizontal" role="form" method="POST">
+											<div class="form-group">
+												<label class="control-label col-sm-2" for="sender-name">Your Name:</label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control" name="sender-name" id="sender-name">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2" for="email">Your Email:</label>
+												<div class="col-sm-10">          
+													<input type="email" class="form-control" name="email" id="email">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2" for="banner-title">Banner Title:</label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control" name="banner-title" id="banner-title">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2" for="url-redirect">Full URL Redirect:</label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control" name="url-redirect" id="url-redirect">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2" for="url-image">Full URL Image:</label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control" name="url-image" id="url-image">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2" for="message">Message: (Optional)</label>
+												<div class="col-sm-10">          
+													<textarea rows="4" name="message" id="message" maxlength="1000"
+													placeholder="Conte por que você deseja exibir seu banner, conte o que seu site faz"></textarea>
+												</div>
+											</div>
+											<div class="form-group">        
+												<div class="col-sm-offset-2 col-sm-10">
+													<button class="btn btn-info gray pull-right" onClick="sendMail();return false;">Send</button>
+												</div>
+											</div>
+										</form>
+									</li>
+									<li>	
+										Submenta o código completo do banner como o dos exemplos:
+<pre>
+	&lta href="#" target="_blank" id="sponsored-banner"&gt
+		&ltimg src="temp/125x125.png"&gt
+	&lt/a&gt
+</pre>
+
+<pre>
+	&ltscript async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">&lt/script&gt
+	<!-- Cabecalho -->
+	&ltins class="adsbygoogle"
+		 style="display:inline-block;width:728px;height:90px"
+		 data-ad-client="ca-pub-4561983939797386"
+		 data-ad-slot="5270673756"&gt&lt/ins&gt
+	&ltscript&gt
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	&lt/script&gt
+</pre>
+
+<pre>
+	&ltscript type="text/javascript" src="http://adhitzads.com/839592"&gt&lt/script&gt
+</pre>
+									<form id="block-banner-form" class="form-horizontal" role="form" method="POST">
+											<div class="form-group">
+												<label class="control-label col-sm-2" for="sender-name">Your Name:</label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control" name="sender-name" id="sender-name">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2" for="email">Your Email:</label>
+												<div class="col-sm-10">          
+													<input type="email" class="form-control" name="email" id="email">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2" for="banner-block">Banner Block</label>
+												<div class="col-sm-10">          
+													<textarea rows="4" name="banner-block" id="banner-block" maxlength="1000"></textarea>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2" for="message">Message: (Optional)</label>
+												<div class="col-sm-10">          
+													<textarea rows="4" name="message" id="message" maxlength="1000"
+													placeholder="Conte por que você deseja exibir seu banner, conte o que seu site faz"></textarea>
+												</div>
+											</div>
+											<div class="form-group">        
+												<div class="col-sm-offset-2 col-sm-10">
+													<button class="btn btn-info pull-right" onClick="sendMail();return false;">Send</button>
+												</div>
+											</div>
+										</form>
+									</li>
+								</ol>
+							</p>
+                        </div>
+                        <div class="panel-footer span7 text-center">
+                            <a href="contact.html" class="title">Have any doubt? send us an Email</a>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+		<footer class="text-center">
+			My Banners - 2015. All rights reserved
+		</footer>
 	</body>
 </html>
