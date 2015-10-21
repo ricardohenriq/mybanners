@@ -1,5 +1,8 @@
 function stripTags(str){
-    return str.replace(/<\/?[^>]+>/gi, '');
+    //return str.replace(/<\/?[^>]+>/gi, '');
+    str = str.replace(/</gi, '&lt');
+    str = str.replace(/>/gi, '&gt');
+	return str;
 }
 
 function validateContactForm(formId){
@@ -43,14 +46,9 @@ function sendToMandrill(body, subject){
 	});
 }
 
-function getFormSubject(formId){
-	return $('#' + formId + ' #subject').val();
-}
-
-function sendMail(formId){
+function sendMail(formId, subject){
 	var formValues = validateContactForm(formId);
 	var body = createContactEmail(formValues);
-	var subject = getFormSubject(formId);
 	sendToMandrill(body, subject);
 	alert('Email Enviado!');
 }

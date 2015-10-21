@@ -77,11 +77,11 @@
 										Submeta o <span class="title">Link Completo de Redirecionamento</span> quando o Banner for clicado seguindo o exemplo:
 										(<span class="title">http://www.site.com</span>) e o <span class="title">Link Completo da Imagem</span> seguindo o exemplo: (<span class="title">http://www.site.com/banner.gif</span>).
 										<br><br>
-										<form id="separate-banner-form" class="form-horizontal" role="form" method="POST">
+										<form id="separate-banner-form" class="form-horizontal" method="POST">
 											<div class="form-group">
-												<label class="control-label col-sm-2" for="sender-name">Your Name:</label>
+												<label class="control-label col-sm-2" for="sender_name">Your Name:</label>
 												<div class="col-sm-10">
-													<input type="text" class="form-control" name="sender-name" id="sender-name">
+													<input type="text" class="form-control" name="sender_name" id="sender_name">
 												</div>
 											</div>
 											<div class="form-group">
@@ -91,21 +91,21 @@
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="control-label col-sm-2" for="banner-title">Banner Title:</label>
+												<label class="control-label col-sm-2" for="banner_title">Banner Title:</label>
 												<div class="col-sm-10">
-													<input type="text" class="form-control" name="banner-title" id="banner-title">
+													<input type="text" class="form-control" name="banner_title" id="banner_title">
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="control-label col-sm-2" for="url-redirect">Full URL Redirect:</label>
+												<label class="control-label col-sm-2" for="url_redirect">Full URL Redirect:</label>
 												<div class="col-sm-10">
-													<input type="text" class="form-control" name="url-redirect" id="url-redirect">
+													<input type="text" class="form-control" name="url_redirect" id="url_redirect">
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="control-label col-sm-2" for="url-image">Full URL Image:</label>
+												<label class="control-label col-sm-2" for="url_image">Full URL Image:</label>
 												<div class="col-sm-10">
-													<input type="text" class="form-control" name="url-image" id="url-image">
+													<input type="text" class="form-control" name="url_image" id="url_image">
 												</div>
 											</div>
 											<div class="form-group">
@@ -117,7 +117,7 @@
 											</div>
 											<div class="form-group">        
 												<div class="col-sm-offset-2 col-sm-10">
-													<button class="btn btn-info pull-right" onClick="sendMail();return false;">Send</button>
+													<button class="btn btn-info pull-right" onClick="sendMail('separate-banner-form', '[Send Banner Separate] |MyBanners Site|');return false;">Send</button>
 												</div>
 											</div>
 										</form>
@@ -145,11 +145,11 @@
 <pre>
 	&ltscript type="text/javascript" src="http://adhitzads.com/839592"&gt&lt/script&gt
 </pre>
-									<form id="block-banner-form" class="form-horizontal" role="form" method="POST">
+									<form id="block-banner-form" class="form-horizontal" method="POST">
 											<div class="form-group">
-												<label class="control-label col-sm-2" for="sender-name">Your Name:</label>
+												<label class="control-label col-sm-2" for="sender_name">Your Name:</label>
 												<div class="col-sm-10">
-													<input type="text" class="form-control" name="sender-name" id="sender-name">
+													<input type="text" class="form-control" name="sender_name" id="sender_name">
 												</div>
 											</div>
 											<div class="form-group">
@@ -159,9 +159,9 @@
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="control-label col-sm-2" for="banner-block">Banner Block</label>
+												<label class="control-label col-sm-2" for="banner_block">Banner Block</label>
 												<div class="col-sm-10">          
-													<textarea rows="4" name="banner-block" id="banner-block" maxlength="1000"></textarea>
+													<textarea rows="4" name="banner_block" id="banner_block" maxlength="1000"></textarea>
 												</div>
 											</div>
 											<div class="form-group">
@@ -173,7 +173,7 @@
 											</div>
 											<div class="form-group">        
 												<div class="col-sm-offset-2 col-sm-10">
-													<button class="btn btn-info pull-right" onClick="sendMail();return false;">Send</button>
+													<button class="btn btn-info pull-right" onClick="sendMail('block-banner-form', '[Send Banner Block] |MyBanners Site|');return false;">Send</button>
 												</div>
 											</div>
 										</form>
