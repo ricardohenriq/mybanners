@@ -52,3 +52,26 @@ function sendMail(formId, subject){
 	sendToMandrill(body, subject);
 	alert('Email Enviado!');
 }
+
+function readTextFile(fileURL)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", fileURL, false);
+    rawFile.onreadystatechange = function()
+	{
+        if(rawFile.readyState === 4)
+		{
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                alert(allText);
+            }
+        }
+    }
+    rawFile.send(null);
+}
+
+function callReadTextFile()
+{
+	readTextFile('');
+}
