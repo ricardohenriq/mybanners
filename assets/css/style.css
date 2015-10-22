@@ -2,18 +2,8 @@ body{
 	position:relative
 }
 
-#header-content{
-	display:inline-block;
-	margin-right:50px
-}
-
 #sponsored-banner img{
 	margin-top:-50px;
-}
-
-#header-description{
-	width:80%;
-	margin:0 auto
 }
 
 #menu{
@@ -36,11 +26,11 @@ h2{
 	margin-top:0px
 }
 
-.site-name{
+#site-name{
 	color:#49515A
 }
 
-.slogan{
+#slogan{
 	color:#BBBDBF
 }
 
@@ -92,4 +82,12 @@ ol li{
 
 textarea{
 	width:100%
+}
+
+#site-logo{
+	margin-right:30px
+}
+
+#site-presentation{
+	display:inline-block
 }
