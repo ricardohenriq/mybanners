@@ -1,7 +1,3 @@
-$(document).ready(function(){
-    updateBanners();
-});
-
 function stripTags(str){
     //return str.replace(/<\/?[^>]+>/gi, '');
     str = str.replace(/</gi, '&lt');
