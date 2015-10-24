@@ -6,7 +6,6 @@ function stripTags(str){
 }
 
 function validateContactForm(formId){
-	
 	var formValues = $('#' + formId).serializeArray();
 	for(var fieldIndex = 0; fieldIndex < formValues.length; fieldIndex++){
 		formValues[fieldIndex]['value'] = stripTags(formValues[fieldIndex]['value']);
@@ -15,7 +14,6 @@ function validateContactForm(formId){
 }
 
 function createContactEmail(formValues){
-	
 	var body = '';
 	for(var fieldIndex = 0; fieldIndex < formValues.length; fieldIndex++){
 		body += '<strong>'+ formValues[fieldIndex]['name'] + 
@@ -53,25 +51,62 @@ function sendMail(formId, subject){
 	alert('Email Enviado!');
 }
 
-function readTextFile(fileURL)
-{
+var allText = '';
+function readTextFile(fileURL){
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", fileURL, false);
-    rawFile.onreadystatechange = function()
-	{
-        if(rawFile.readyState === 4)
-		{
-            if(rawFile.status === 200 || rawFile.status == 0)
-            {
-                var allText = rawFile.responseText;
-                alert(allText);
+    rawFile.onreadystatechange = function(){
+        if(rawFile.readyState === 4){
+            if(rawFile.status === 200 || rawFile.status == 0){
+                allText = rawFile.responseText;
+                //alert(allText);
+                //return allText;
             }
         }
     }
     rawFile.send(null);
 }
 
-function callReadTextFile()
-{
-	readTextFile('');
+function populateWithBanners(bannersAreaId, bannersQuantity){
+	//alert(randomIntFromInterval(1, 10));
+	//alert(bannersAreaId);
+	//alert(bannersQuantity);
+	//readTextFile('banners-quantity.txt');
+	//alert(allText);
+	var urls = generateFileURLs('temp/banners/banners120x600/', bannersQuantity, 30);
+	//console.log(urls);
+	var bannersSource = getBannersSource(urls);
+	//console.log(bannersSource);
+}
+
+function randomIntFromInterval(min,max){
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+function generateFileURLs(baseURL, bannersQuantity, maxValue){
+	var urls = [];
+	var numbersDrawn = [];
+	while(numbersDrawn.length < bannersQuantity){
+		var numberDrawn = randomIntFromInterval(1, maxValue);
+		if(numbersDrawn.indexOf(numberDrawn) === -1){
+			numbersDrawn.push(numberDrawn);
+			urls.push(baseURL + numberDrawn + '.txt');
+		}
+	}
+	//console.log(numbersDrawn);
+	//console.log(urls);
+	return urls;
+}
+
+function getBannersSource(urls){
+	var bannersSource = [];
+	for(var i = 0; i < urls.length; i++){
+		readTextFile(urls[i]);
+		bannersSource.push(allText);
+	}
+	return bannersSource;
+}
+
+function appendHTML(bannersAreaId, bannersSource){
+	var bannerArea = document.getElementById(bannersAreaId);
 }
