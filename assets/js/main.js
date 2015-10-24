@@ -51,6 +51,13 @@ function sendMail(formId, subject){
 	alert('Email Enviado!');
 }
 
+function updateBanners(){
+	populateWithBanners('banners120x600', 11);
+	populateWithBanners('banners300x250', 11);
+}
+
+setInterval(updateBanners, 7000);
+
 var allText = '';
 function readTextFile(fileURL){
     var rawFile = new XMLHttpRequest();
@@ -61,7 +68,9 @@ function readTextFile(fileURL){
                 allText = rawFile.responseText;
                 //alert(allText);
                 //return allText;
-            }
+            }else{
+				allText = '';
+			}
         }else{
 			allText = '';
 		}
@@ -70,12 +79,21 @@ function readTextFile(fileURL){
 }
 
 function populateWithBanners(bannersAreaId, bannersQuantity){
+	var folderURLs = [];
+	folderURLs['banners120x600'] = 'temp/banners/banners120x600/';
+	folderURLs['banners300x250'] = 'temp/banners/banners300x250/';
+	folderURLs['banners125x125'] = 'temp/banners/banners125x125/';
+	folderURLs['banners468x60'] = 'temp/banners/banners468x60/';
+	folderURLs['banners728x90'] = 'temp/banners/banners728x90/';
+
 	//alert(randomIntFromInterval(1, 10));
 	//alert(bannersAreaId);
 	//alert(bannersQuantity);
-	//readTextFile('banners-quantity.txt');
+	readTextFile('banners-quantity.txt');
+	var bannersQuantityStored = parseInt(allText);
+	//alert(readTextFile('banners-quantity.txt'));
 	//alert(allText);
-	var bannersSource = getBannersSource('temp/banners/banners120x600/', bannersQuantity, 30);
+	var bannersSource = getBannersSource(folderURLs[bannersAreaId], bannersQuantity, bannersQuantityStored);
 	//console.log(urls);
 	//var bannersSource = getBannersSource(urls);
 	//console.log(bannersSource);
