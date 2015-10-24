@@ -43,8 +43,9 @@ h2{
 	font-weight:bold
 }
 
-.banner img{
-	margin:3px
+.banner{
+	margin:3px;
+	display:inline-block
 }
 
 .row{

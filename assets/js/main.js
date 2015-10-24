@@ -77,6 +77,8 @@ function populateWithBanners(bannersAreaId, bannersQuantity){
 	//console.log(urls);
 	var bannersSource = getBannersSource(urls);
 	//console.log(bannersSource);
+	emptyTag(bannersAreaId);
+	appendHTML(bannersAreaId, bannersSource);
 }
 
 function randomIntFromInterval(min,max){
@@ -109,4 +111,14 @@ function getBannersSource(urls){
 
 function appendHTML(bannersAreaId, bannersSource){
 	var bannerArea = document.getElementById(bannersAreaId);
+	for(var i = 0; i < bannersSource.length; i++){
+		var div = document.createElement('div');
+		$(div).addClass('banner');
+		$(div).append(bannersSource[i]);
+		$(bannerArea).append(div);	
+	}
+}
+
+function emptyTag(bannersAreaId){
+	$('#' + bannersAreaId).empty();
 }
