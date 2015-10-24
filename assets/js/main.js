@@ -62,7 +62,9 @@ function readTextFile(fileURL){
                 //alert(allText);
                 //return allText;
             }
-        }
+        }else{
+			allText = '';
+		}
     }
     rawFile.send(null);
 }
@@ -73,9 +75,9 @@ function populateWithBanners(bannersAreaId, bannersQuantity){
 	//alert(bannersQuantity);
 	//readTextFile('banners-quantity.txt');
 	//alert(allText);
-	var urls = generateFileURLs('temp/banners/banners120x600/', bannersQuantity, 30);
+	var bannersSource = getBannersSource('temp/banners/banners120x600/', bannersQuantity, 30);
 	//console.log(urls);
-	var bannersSource = getBannersSource(urls);
+	//var bannersSource = getBannersSource(urls);
 	//console.log(bannersSource);
 	emptyTag(bannersAreaId);
 	appendHTML(bannersAreaId, bannersSource);
@@ -85,27 +87,22 @@ function randomIntFromInterval(min,max){
     return Math.floor(Math.random()*(max-min+1)+min);
 }
 
-function generateFileURLs(baseURL, bannersQuantity, maxValue){
-	var urls = [];
+function getBannersSource(baseURL, bannersQuantity, maxValue){
+	//var urls = [];
+	var bannersSource = [];
 	var numbersDrawn = [];
 	while(numbersDrawn.length < bannersQuantity){
 		var numberDrawn = randomIntFromInterval(1, maxValue);
 		if(numbersDrawn.indexOf(numberDrawn) === -1){
-			numbersDrawn.push(numberDrawn);
-			urls.push(baseURL + numberDrawn + '.txt');
+			readTextFile(baseURL + numberDrawn + '.txt');
+			if(allText !== ''){
+				bannersSource.push(allText);
+				numbersDrawn.push(numberDrawn);
+			}
 		}
 	}
 	//console.log(numbersDrawn);
-	//console.log(urls);
-	return urls;
-}
-
-function getBannersSource(urls){
-	var bannersSource = [];
-	for(var i = 0; i < urls.length; i++){
-		readTextFile(urls[i]);
-		bannersSource.push(allText);
-	}
+	//console.log(bannersSource);
 	return bannersSource;
 }
 
