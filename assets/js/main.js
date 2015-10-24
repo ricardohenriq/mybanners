@@ -51,16 +51,6 @@ function sendMail(formId, subject){
 	alert('Email Enviado!');
 }
 
-function updateBanners(){
-	populateWithBanners('banners120x600', 11);
-	populateWithBanners('banners300x250', 11);
-	populateWithBanners('banners125x125', 11);
-	populateWithBanners('banners468x60', 11);
-	populateWithBanners('banners728x90', 11);
-}
-
-setInterval(updateBanners, 7000);
-
 var allText = '';
 function readTextFile(fileURL){
     var rawFile = new XMLHttpRequest();
