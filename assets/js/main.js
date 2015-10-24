@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    updateBanners();
+});
+
 function stripTags(str){
     //return str.replace(/<\/?[^>]+>/gi, '');
     str = str.replace(/</gi, '&lt');
@@ -54,6 +58,9 @@ function sendMail(formId, subject){
 function updateBanners(){
 	populateWithBanners('banners120x600', 11);
 	populateWithBanners('banners300x250', 11);
+	populateWithBanners('banners125x125', 11);
+	populateWithBanners('banners468x60', 11);
+	populateWithBanners('banners728x90', 11);
 }
 
 setInterval(updateBanners, 7000);
@@ -66,8 +73,6 @@ function readTextFile(fileURL){
         if(rawFile.readyState === 4){
             if(rawFile.status === 200 || rawFile.status == 0){
                 allText = rawFile.responseText;
-                //alert(allText);
-                //return allText;
             }else{
 				allText = '';
 			}
@@ -86,17 +91,9 @@ function populateWithBanners(bannersAreaId, bannersQuantity){
 	folderURLs['banners468x60'] = 'temp/banners/banners468x60/';
 	folderURLs['banners728x90'] = 'temp/banners/banners728x90/';
 
-	//alert(randomIntFromInterval(1, 10));
-	//alert(bannersAreaId);
-	//alert(bannersQuantity);
-	readTextFile('banners-quantity.txt');
+	readTextFile(folderURLs[bannersAreaId] + 'banners-quantity.txt');
 	var bannersQuantityStored = parseInt(allText);
-	//alert(readTextFile('banners-quantity.txt'));
-	//alert(allText);
 	var bannersSource = getBannersSource(folderURLs[bannersAreaId], bannersQuantity, bannersQuantityStored);
-	//console.log(urls);
-	//var bannersSource = getBannersSource(urls);
-	//console.log(bannersSource);
 	emptyTag(bannersAreaId);
 	appendHTML(bannersAreaId, bannersSource);
 }
@@ -106,7 +103,6 @@ function randomIntFromInterval(min,max){
 }
 
 function getBannersSource(baseURL, bannersQuantity, maxValue){
-	//var urls = [];
 	var bannersSource = [];
 	var numbersDrawn = [];
 	while(numbersDrawn.length < bannersQuantity){
@@ -119,8 +115,6 @@ function getBannersSource(baseURL, bannersQuantity, maxValue){
 			}
 		}
 	}
-	//console.log(numbersDrawn);
-	//console.log(bannersSource);
 	return bannersSource;
 }
 

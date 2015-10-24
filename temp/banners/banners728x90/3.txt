@@ -1,3 +1,3 @@
 <a href="#" target="_blank" class="banner">
-	<img src="http://mybanners.github.io/temp/728x90/728x90blue.png">
+	<img src="temp/728x90/728x90blue.png">
 </a>
