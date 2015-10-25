@@ -1,3 +1,11 @@
+$(document).ready(function(){
+    populateWithBanners('banners120x600', 5);
+	populateWithBanners('banners300x250', 5);
+	populateWithBanners('banners125x125', 5);
+	populateWithBanners('banners468x60', 5);
+	populateWithBanners('banners728x90', 5);
+});
+
 function stripTags(str){
     //return str.replace(/<\/?[^>]+>/gi, '');
     str = str.replace(/</gi, '&lt');
