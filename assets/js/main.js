@@ -34,12 +34,12 @@ function sendToMandrill(body, subject){
 		type:"POST",
 		url:"https://mandrillapp.com/api/1.0/messages/send.json",
 		data:{
-				'key':'-po7dRSIlB4YoFYevstd_w',
+				'key':'Akj5sUZpdPZ7O3LbpPpSiw',
 				'message':{
-					'from_email':'ricardohenrique996@gmail.com',
+					'from_email':'albernazassis@gmail.com',
 					'to':[
 						{
-							'email':'ricardohenrique1@outlook.com',
+							'email':'albernazassis@gmail.com',
 							'name':'Ricardo Henrique',
 							'type':'to'
 						}

@@ -11,19 +11,20 @@
 			Company,access offer,Publish affiliate banner.">
 		<meta name="robots" content="index, follow">
 		<meta name="author" content="Ricardo Henrique">
-		<meta name="reply-to" content="mybannersreceiver@gmail.com">
+		<meta name="reply-to" content="albernazassis@gmail.com">
 		<link rel="icon" href="assets/images/Leprechaun32x32.png" sizes="32x32">
 		<meta name="twitter:card" content="summary">
 		<meta name="twitter:site" content="@mybanners">
-		<meta name="twitter:creator" content="@ricardohenriq">
+		<meta name="twitter:creator" content="@ricardohenrique">
 		<meta property="og:title" content="Publish your Banner to World">
 		<meta property="og:description" content="You can publish your banner for free, discover interesting sites,
 			access offers and companies.">
-		<meta property="og:url" content="http://mybanners.github.io/">
-		<meta property="og:image" content="http://mybanners.github.io/assets/images/Leprechaun150x150.gif">
+		<meta property="og:url" content="http://mybanners.divshot.io/">
+		<meta property="og:image" content="http://mybanners.divshot.io/assets/images/Leprechaun600x600.gif">
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="MyBanners - Publish your Banner to World">
 		<link rel="stylesheet" href="library/Bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="assets/css/style.css">
 		<script defer src="library/jquery-1.11.1/jquery-1.11.1.min.js"></script>
 		<script defer src="library/Bootstrap/js/bootstrap.min.js"></script>
@@ -43,15 +44,21 @@
 							<img src="temp/125x125.png">
 						</a>
 						<div id="menu" class="span7 text-center">
-							<a class="btn btn-xs btn-info" href="index.html">Banners</a>
-							<a class="btn btn-xs btn-info" href="send-your-banner.html">Send your Banner</a>
-							<a class="btn btn-xs btn-info" href="terms-of-use.html">Terms of Use</a>
-							<a class="btn btn-xs btn-info" href="privacy-policy.html">Privacy Policy</a>
-							<a class="btn btn-xs btn-info" href="#">Contact</a>
-							<a class="btn btn-xs btn-info" href="create-banner.html">Create a Banner</a>
-							<a class="btn btn-xs btn-info" href="#">Donate</a>
-							<a class="btn btn-xs btn-info" href="buy-background.html">Buy the Background</a>
-							<a class="btn btn-xs btn-info" href="how-it-works.html">How it Works</a>
+							<a class="btn btn-xs gray" href="index.html">Banners</a>
+							<a class="btn btn-xs gray" href="send-your-banner.html">Send your Banner</a>							
+							<a class="btn btn-xs gray" href="create-banner.html">Create a Banner</a>
+							<a class="btn btn-xs gray" href="#">Donate</a>
+							<a class="btn btn-xs gray" href="how-it-works.html">How it Works</a>
+							<div class="btn-group">
+								<button type="button" class="btn btn-xs gray dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									About the Site <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu dropdown-menu-custom">
+									<li><a class="btn btn-xs gray" href="contact.html">Contact</a></li>
+									<li><a class="btn btn-xs gray" href="terms-of-use.html">Terms of Use</a></li>
+									<li><a class="btn btn-xs gray" href="privacy-policy.html">Privacy Policy</a></li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -130,7 +137,7 @@
 							</div>
 							<div class="form-group">        
 								<div class="col-sm-offset-2 col-sm-10">
-									<button class="btn btn-info pull-right" onClick="sendMail('contact-form', '[Contato] |MyBanners Site|');return false;">Send</button>
+									<button class="btn gray pull-right" onClick="sendMail('contact-form', '[Contato] |MyBanners Site|');return false;">Send</button>
 								</div>
 							</div>
 						</form>
@@ -138,8 +145,5 @@
 				</div>
 			</div>
 		</div>
-		<footer class="text-center">
-			My Banners - 2015. All rights reserved
-		</footer>
 	</body>
 </html>
