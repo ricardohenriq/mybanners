@@ -2,7 +2,21 @@ $(document).ready(function(){
 	populateWithBanners('banners300x250', 5);
 	populateWithBanners('banners125x125', 5);
 	populateWithBanners('banners468x60', 5);
-	populateWithBanners('banners728x90', 5);
+});
+
+$("#banner125x125").click(function(){
+	populateWithBanners('banners125x125',5);
+	return false;
+});
+
+$("#banners300x250").click(function(){
+	populateWithBanners('banners300x250',5);
+	return false;
+});
+
+$("#banners468x60").click(function(){
+	populateWithBanners('banners468x60',5);
+	return false;
 });
 
 function stripTags(str){
