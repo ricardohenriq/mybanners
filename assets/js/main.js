@@ -58,6 +58,21 @@ function sendMail(formId, subject){
 	alert('Email Enviado!');
 }
 
+$("#contact-mail").click(function(){
+	sendMail('contact-form', '[Contato] |MyBanners Site|');
+	return false;
+});
+
+$("#separate-banner-email").click(function(){
+	sendMail('separate-banner-form', '[Send Banner Separate] |MyBanners Site|');
+	return false;
+});
+
+$("#block-banner-email").click(function(){
+	sendMail('block-banner-form', '[Send Banner Block] |MyBanners Site|');
+	return false;
+});
+
 var allText = '';
 function readTextFile(fileURL){
     var rawFile = new XMLHttpRequest();

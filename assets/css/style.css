@@ -3,7 +3,7 @@
 }
 
 header{
-    background-color: #f5f5f5;
+    background-color:#F5F5F5;
 	padding-top:10px;
 	border-top:10px solid #BBBDBF;
 	border-bottom:10px solid #BBBDBF
@@ -11,11 +11,10 @@ header{
 
 .wrapper{
 	margin-top:10px;
-	margin-bottom:10px
 }
 
 h2{
-	margin-top:0px
+	margin-top:0
 }
 
 #site-name{
@@ -49,14 +48,14 @@ ol li{
 }
 
 .yes li {
-	list-style-type: none;
-	background: url('https://mybanners.divshot.io/master/temp/yes-icon.png') no-repeat;
+	list-style-type:none;
+	background:url('http://mybanners.github.io/assets/images/yes-icon30x30.min.png') no-repeat;
 	padding:0 0 2% 45px;
 }
 
 .right-arrow li{
-	list-style-type: none;
-	background: url('https://mybanners.divshot.io/master/temp/right-arrow-icon30x30.gif') no-repeat;
+	list-style-type:none;
+	background:url('http://mybanners.github.io/assets/images/right-arrow-icon30x30.min.png') no-repeat;
 	padding:0 0 2% 45px;
 }
 
