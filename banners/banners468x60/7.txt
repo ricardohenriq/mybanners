@@ -1,0 +1,3 @@
+<a href="#" target="_blank" class="banner">
+	<img src="temp/468x60/468x60lightgreen.png">
+</a>

@@ -1,89 +1,19 @@
 $(document).ready(function(){
-	populateWithBanners('banners300x250', 5);
-	populateWithBanners('banners125x125', 5);
-	populateWithBanners('banners468x60', 5);
+	populateWithBannersRow(2, 3);
 });
 
-$("#reload-banners-125x125").click(function(){
+$('.container').on('click', '#reload-banners125x125', function(){
 	populateWithBanners('banners125x125',5);
 	return false;
 });
 
-$("#reload-banners-300x250").click(function(){
+$('.container').on('click', '#reload-banners300x250', function(){
 	populateWithBanners('banners300x250',5);
 	return false;
 });
 
-$("#reload-banners-468x60").click(function(){
+$('.container').on('click', '#reload-banners468x60',function(){
 	populateWithBanners('banners468x60',5);
-	return false;
-});
-
-function stripTags(str){
-    //return str.replace(/<\/?[^>]+>/gi, '');
-    str = str.replace(/</gi, '&lt');
-    str = str.replace(/>/gi, '&gt');
-	return str;
-}
-
-function validateContactForm(formId){
-	var formValues = $('#' + formId).serializeArray();
-	for(var fieldIndex = 0; fieldIndex < formValues.length; fieldIndex++){
-		formValues[fieldIndex]['value'] = stripTags(formValues[fieldIndex]['value']);
-	}
-	return formValues;
-}
-
-function createContactEmail(formValues){
-	var body = '';
-	for(var fieldIndex = 0; fieldIndex < formValues.length; fieldIndex++){
-		body += '<strong>'+ formValues[fieldIndex]['name'] + 
-			': </strong>' + formValues[fieldIndex]['value'] + '<br>';
-	}
-	return body;
-}
-
-function sendToMandrill(body, subject){
-	$.ajax({
-		type:"POST",
-		url:"https://mandrillapp.com/api/1.0/messages/send.json",
-		data:{
-				'key':'Akj5sUZpdPZ7O3LbpPpSiw',
-				'message':{
-					'from_email':'albernazassis@gmail.com',
-					'to':[
-						{
-							'email':'albernazassis@gmail.com',
-							'name':'Ricardo Henrique',
-							'type':'to'
-						}
-					],
-					'subject':subject,
-					'html':body
-				}
-			}
-	});
-}
-
-function sendMail(formId, subject){
-	var formValues = validateContactForm(formId);
-	var body = createContactEmail(formValues);
-	sendToMandrill(body, subject);
-	alert('Email Enviado!');
-}
-
-$("#contact-mail").click(function(){
-	sendMail('contact-form', '[Contato] |MyBanners Site|');
-	return false;
-});
-
-$("#separate-banner-email").click(function(){
-	sendMail('separate-banner-form', '[Send Banner Separate] |MyBanners Site|');
-	return false;
-});
-
-$("#block-banner-email").click(function(){
-	sendMail('block-banner-form', '[Send Banner Block] |MyBanners Site|');
 	return false;
 });
 
@@ -103,6 +33,42 @@ function readTextFile(fileURL){
 		}
     }
     rawFile.send(null);
+}
+
+function populateWithBannersRow(qtdRow, qtdRowsAvailable){
+	var containerNumbers = randomBannersRow(qtdRow, qtdRowsAvailable);
+	for(var i = 0; i < containerNumbers.length; i++){
+		createBannersRow(
+			bannersRow[containerNumbers[i]]['bannerTitle'], 
+			bannersRow[containerNumbers[i]]['bannerReloadID'],
+			bannersRow[containerNumbers[i]]['bannerAreaID']
+		);
+		populateWithBanners(bannersRow[containerNumbers[i]]['bannerAreaID'], 5);
+	}
+}
+
+function randomBannersRow(qtdRow, qtdRowsAvailable){
+	var containerNumbers = [];
+	while(containerNumbers.length < qtdRow){
+		var number = randomIntFromInterval(0, qtdRowsAvailable - 1);
+		if(containerNumbers.indexOf(number) === -1){
+			containerNumbers.push(number);
+		}
+	}
+	return containerNumbers;
+}
+
+var bannersRow = [
+	{'bannerTitle':'Banners 300x250','bannerReloadID':'reload-banners300x250','bannerAreaID':'banners300x250'},
+	{'bannerTitle':'Banners 125x125','bannerReloadID':'reload-banners125x125','bannerAreaID':'banners125x125'},
+	{'bannerTitle':'Banners 468x60','bannerReloadID':'reload-banners468x60','bannerAreaID':'banners468x60'}
+];
+
+function createBannersRow(bannerTitle, bannerReloadID, bannerAreaID){
+	var bannerContainer = document.getElementsByClassName('container')[1];
+	var row = 
+	"<div class='row'><div class='col-md-10 col-md-offset-1 span7 text-center'><div class='banners-type'><span>" + bannerTitle + "</span> <a id='" + bannerReloadID + "' href='#' class='reload-banners' title='Atualizar Banners'><img src='assets/images/reload-icon30x30.min.png'></a></div><div class='banners-area' id='" + bannerAreaID + "'></div></div></div>";
+	$(bannerContainer).append(row);
 }
 
 function populateWithBanners(bannersAreaId, bannersQuantity){
@@ -152,4 +118,8 @@ function appendHTML(bannersAreaId, bannersSource){
 
 function emptyTag(bannersAreaId){
 	$('#' + bannersAreaId).empty();
+}
+
+function randomIntFromInterval(min,max){
+    return Math.floor(Math.random()*(max-min+1)+min);
 }
