@@ -59,9 +59,11 @@ function randomBannersRow(qtdRow, qtdRowsAvailable){
 }
 
 var bannersRow = [
+	{'bannerTitle':'Banners 120x600','bannerReloadID':'reload-banners120x600','bannerAreaID':'banners120x600'},
 	{'bannerTitle':'Banners 300x250','bannerReloadID':'reload-banners300x250','bannerAreaID':'banners300x250'},
 	{'bannerTitle':'Banners 125x125','bannerReloadID':'reload-banners125x125','bannerAreaID':'banners125x125'},
-	{'bannerTitle':'Banners 468x60','bannerReloadID':'reload-banners468x60','bannerAreaID':'banners468x60'}
+	{'bannerTitle':'Banners 468x60','bannerReloadID':'reload-banners468x60','bannerAreaID':'banners468x60'},
+	{'bannerTitle':'Banners 728x90','bannerReloadID':'reload-banners728x90','bannerAreaID':'banners728x90'}
 ];
 
 function createBannersRow(bannerTitle, bannerReloadID, bannerAreaID){
@@ -73,11 +75,11 @@ function createBannersRow(bannerTitle, bannerReloadID, bannerAreaID){
 
 function populateWithBanners(bannersAreaId, bannersQuantity){
 	var folderURLs = [];
-	folderURLs['banners120x600'] = 'temp/banners/banners120x600/';
-	folderURLs['banners300x250'] = 'temp/banners/banners300x250/';
-	folderURLs['banners125x125'] = 'temp/banners/banners125x125/';
-	folderURLs['banners468x60'] = 'temp/banners/banners468x60/';
-	folderURLs['banners728x90'] = 'temp/banners/banners728x90/';
+	folderURLs['banners120x600'] = 'banners/banners120x600/';
+	folderURLs['banners300x250'] = 'banners/banners300x250/';
+	folderURLs['banners125x125'] = 'banners/banners125x125/';
+	folderURLs['banners468x60'] = 'banners/banners468x60/';
+	folderURLs['banners728x90'] = 'banners/banners728x90/';
 
 	readTextFile(folderURLs[bannersAreaId] + 'banners-quantity.txt');
 	var bannersQuantityStored = parseInt(allText);
@@ -86,8 +88,8 @@ function populateWithBanners(bannersAreaId, bannersQuantity){
 	appendHTML(bannersAreaId, bannersSource);
 }
 
-function randomIntFromInterval(min,max){
-    return Math.floor(Math.random()*(max-min+1)+min);
+function randomIntFromInterval(min, max){
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 function getBannersSource(baseURL, bannersQuantity, maxValue){
@@ -118,8 +120,4 @@ function appendHTML(bannersAreaId, bannersSource){
 
 function emptyTag(bannersAreaId){
 	$('#' + bannersAreaId).empty();
-}
-
-function randomIntFromInterval(min,max){
-    return Math.floor(Math.random()*(max-min+1)+min);
 }

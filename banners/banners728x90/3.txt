@@ -1,3 +1,1 @@
-<a href="#" target="_blank" class="banner">
-	<img src="temp/728x90/728x90blue.png">
-</a>
+<a target="_blank" href="http://www.cursos24horas.com.br/parceiro.asp?cod=promocao121862" rel="nofollow"><img alt="Cursos 24 Horas - Cursos 100% Online com Certificado" style="border:none;" width="728" height= "90" src="http://www.cursos24h.net.br/banners/gif1/728x90.gif"></a>

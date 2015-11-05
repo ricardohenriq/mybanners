@@ -1,3 +1,1 @@
-<a href="#" target="_blank" class="banner">
-	<img src="temp/125x125/125x125green.png">
-</a>
+<a href="http://www.iped.com.br/concursos-publicos/afiliado/4400847"><img src="http://www.iped.com.br/_img/parceiros/200x200/banner-concursos-publicos.gif" class="banner-button"></a>

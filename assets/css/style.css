@@ -1,3 +1,37 @@
+.banner{
+	display:inline;
+}
+
+.banner-leaderboard{
+	width:728px;
+	height:90px
+}
+
+.banner-full{
+	width:468px;
+	height:60px
+}
+
+.banner-popup{
+	width:300px;
+	height:250px
+}
+
+.banner-button{
+	width:125px;
+	height:125px
+}
+
+.banner-wide-skyscraper{
+	width:120px;
+	height:600px
+}
+
+.orange-button{
+	 background-color:#f39c12 !important;
+	 color:#000 !important;
+}
+
 #sponsored-banner{
 	display:inline
 }
@@ -53,13 +87,13 @@ ol li{
 
 .yes li {
 	list-style-type:none;
-	background:url('http://mybanners.github.io/assets/images/yes-icon30x30.min.png') no-repeat;
+	background:url('http://mybanners.divshot.io/assets/images/yes-icon30x30.min.png') no-repeat;
 	padding:0 0 2% 45px;
 }
 
 .right-arrow li{
 	list-style-type:none;
-	background:url('http://mybanners.github.io/assets/images/right-arrow-icon30x30.min.png') no-repeat;
+	background:url('http://mybanners.divshot.io/assets/images/right-arrow-icon30x30.min.png') no-repeat;
 	padding:0 0 2% 45px;
 }
 

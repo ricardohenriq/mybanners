@@ -1,3 +1,1 @@
-<a href="#" target="_blank" class="banner">
-	<img src="temp/125x125/125x125red.png">
-</a>
+<a title="beruby - reembolsos pelas suas compras e reservas na Internet" href="http://br.beruby.com/promocode/uHuiUH"><img width="146" height="100" border="0" alt="beruby - reembolsos pelas suas compras e reservas na Internet" src="http://br.beruby.com/images/banner/banner-beruby-146x100-pt-BR.gif" style="width:125px;height:125px"></a>

@@ -1,3 +1,1 @@
-<a href="#" target="_blank" class="banner">
-	<img src="temp/300x250/300x250black.png">
-</a>
+<a href="http://www.clixsense.com/?3658959" target=_blank><img src="http://csstatic.com/banners/clixsense_gpt300x250a.png" border=0></a>
