@@ -1,7 +1,1 @@
-<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash4/cabs/swflash.cab#version=4,0,0,0" id="name" width="728" height="90"> 
-	<param name="movie" value="http://news.digitalafiliados.srv.br/banners/segredosdamusculacao/banner728x90.swf?id=7591"> 
-	<param name="quality" value="high"> 
-	<param name="wmode" value="transparent"> 
-	<embed name="name" src="http://news.digitalafiliados.srv.br/banners/segredosdamusculacao/banner728x90.swf?id=7591" quality="high" wmode="transparent" width="728" height="90" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi? P1_Prod_Version=ShockwaveFlash"> 
-	</embed> 
-</object>
+<a href="https://www.wrike.com/?r=hlgVGvPb" target="_blank"><img width="728" height="90" src="http://partners.wrike.com/assets/promo/en/b25.jpg" alt="Try Wrike: fast, easy, and efficient project collaboration software"></a>

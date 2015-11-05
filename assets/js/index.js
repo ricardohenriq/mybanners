@@ -17,6 +17,16 @@ $('.container').on('click', '#reload-banners468x60',function(){
 	return false;
 });
 
+$('.container').on('click', '#reload-banners120x600',function(){
+	populateWithBanners('banners120x600',5);
+	return false;
+});
+
+$('.container').on('click', '#reload-banners728x90',function(){
+	populateWithBanners('banners728x90',5);
+	return false;
+});
+
 var allText = '';
 function readTextFile(fileURL){
     var rawFile = new XMLHttpRequest();

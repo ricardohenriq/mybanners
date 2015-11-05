@@ -1,0 +1,21 @@
+* DELETE O ARQUIVO QUE CONTÉM A QUANTIDADE DE BANNERS NA PASTA DE NOME:
+
+banners-quantity.txt
+
+* DIGITE NO "WINDOWS POWER SHELL" O CAMINHO PARA PASTA 
+* COM OS ARQUIVOS QUE DESEJA RENOMEAR:
+
+cd C:\xampp\htdocs\PROJETOS\MyBanners\banners\[PASTA]
+ 
+ * DEPOIS RENOMEIE OS ARQUIVOS PARA UM NOME TEMPORARIO:
+ 
+Dir *.txt | ForEach-Object  -begin { $count=1 }  -process { rename-item $_ -NewName "temp$count.txt"; $count++ }
+
+* DEPOIS PARA O NOME QUE DEVERÃO TER (NÃO DA PARA MUDAR DIRETO 
+* PORQUE DA UM ERRO DE NOME DUPLICADO):
+
+Dir *.txt | ForEach-Object  -begin { $count=1 }  -process { rename-item $_ -NewName "$count.txt"; $count++ }
+
+* CRIE O ARQUIVO QUE CONTÉM A QUANTIDADE DE BANNERS NA PASTA COM O NOME:
+
+banners-quantity.txt

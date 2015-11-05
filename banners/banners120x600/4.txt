@@ -1,6 +1,1 @@
-<script id='afl_38405' type='text/javascript'>
-	var pTitle = document.title, aflDate = new Date(), new_js = document.createElement('script');
-	new_js.type = 'text/javascript'; new_js.async = true;
-	new_js.src = 'http://img.afiliados.com.br/banner_creator/loader2.php?aflDate='+aflDate.getHours()+'&banner=38405&franq=AFL-03-148876&title='+ pTitle +'&url=' +document.URL;
-	document.write(new_js.outerHTML);
-</script>
+<a href="http://www.tvonlinepc.com.br/af/7591" target="_blank"><img src="http://news.digitalafiliados.srv.br/banners/tvonlinepc/120x600_ani.gif" border="0"></a>

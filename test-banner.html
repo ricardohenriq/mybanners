@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<title>Publish your Banner to World</title>
 		<meta name="description" content="You can publish your banner for free, discover interesting sites,
 			access offers and companies.">
@@ -27,7 +27,7 @@
 		<link rel="stylesheet" href="assets/css/style.css">
 		<script defer src="library/jquery-1.11.1/jquery-1.11.1.min.js"></script>
 		<script defer src="library/Bootstrap/js/bootstrap.min.js"></script>
-		<script defer src="assets/js/index.js"></script>
+		<script defer src="assets/js/test-banner.js"></script>
 	</head>
 	<body>
 		<header>
@@ -64,8 +64,19 @@
 			</div>
 		</header>
 		<div class="wrapper">
-			<div class="container" id="banners-container">
-				
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 span7 text-center">
+						<div class="block" id="test-container">
+							<h3>Insert the Banner Code in textarea above</h3>
+							<textarea rows="4" id="test-banner-code"></textarea>
+							<button class="btn gray" id="insert-banner-code">Test</button>
+						</div>
+						<div class="block" id="test-area">
+							
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>

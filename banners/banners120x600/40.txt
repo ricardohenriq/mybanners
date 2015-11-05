@@ -1,7 +1,0 @@
-<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash4/cabs/swflash.cab#version=4,0,0,0" id="name" width="120" height="600"> 
-	<param name="movie" value="http://news.digitalafiliados.srv.br/banners/segredosdamusculacao/banner120x600.swf?id=7591"> 
-	<param name="quality" value="high"> 
-	<param name="wmode" value="transparent"> 
-	<embed name="name" src="http://news.digitalafiliados.srv.br/banners/segredosdamusculacao/banner120x600.swf?id=7591" quality="high" wmode="transparent" width="120" height="600" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi? P1_Prod_Version=ShockwaveFlash"> 
-	</embed> 
-</object>

@@ -1,6 +1,1 @@
-<script id='afl_38401' type='text/javascript'>
-	var pTitle = document.title, aflDate = new Date(), new_js = document.createElement('script');
-	new_js.type = 'text/javascript'; new_js.async = true;
-	new_js.src = 'http://img.afiliados.com.br/banner_creator/loader2.php?aflDate='+aflDate.getHours()+'&banner=38401&franq=AFL-03-148876&title='+ pTitle +'&url=' +document.URL;
-	document.write(new_js.outerHTML);
-</script>
+<a href="http://www.iped.com.br/educacao-e-pedagogia/afiliado/4400847"><img src="http://www.iped.com.br/_img/parceiros/200x200/banner-educacao-e-pedagogia.gif" class="banner-button"></a>
