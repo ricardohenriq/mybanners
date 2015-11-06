@@ -87,13 +87,13 @@ ol li{
 
 .yes li {
 	list-style-type:none;
-	background:url('http://mybanners.divshot.io/assets/images/yes-icon30x30.min.png') no-repeat;
+	background:url('assets/images/yes-icon30x30.min.png') no-repeat;
 	padding:0 0 2% 45px;
 }
 
 .right-arrow li{
 	list-style-type:none;
-	background:url('http://mybanners.divshot.io/assets/images/right-arrow-icon30x30.min.png') no-repeat;
+	background:url('assets/images/right-arrow-icon30x30.min.png') no-repeat;
 	padding:0 0 2% 45px;
 }
 
