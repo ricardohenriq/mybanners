@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	populateWithBannersRow(2, 3);
+	populateWithBannersRow(2, 5);
 });
 
 $('.container').on('click', '#reload-banners125x125', function(){

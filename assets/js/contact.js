@@ -51,7 +51,7 @@ function sendMail(formId, subject){
 	alert('Email Enviado!');
 }
 
-$("#contact-mail").click(function(){
+$("#contact-email").click(function(){
 	sendMail('contact-form', '[Contato] |MyBanners Site|');
 	return false;
 });
